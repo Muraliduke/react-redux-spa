@@ -1,0 +1,31 @@
+"prestart": "babel-node tools/startMessage.js", //2 show start msg, poststart also exists similarly
+    "start": "npm-run-all --parallel test:watch open:src lint:watch",//runs any cmd right of npm-run-all
+    "open:src": "babel-node tools/srcServer.js",
+    "lint": "node_modules/.bin/esw webpack.config.* src tools",
+    "lint:watch": "npm run lint -- --watch", //watches lining
+    "test": "mocha --reporter progress tools/testSetup.js \"src/**/*.test.js\"",
+    "test:watch": "npm run test -- --watch"
+ther r 4 ways 2 create a comp
+
+1)ES5 createClass
+2).Es6 class 
+No auto bind of this
+
+onClick={this.handleClick.bind(this)}
+or in constructor
+
+this.handleClick = this.handleClick.bind(this)
+propType declared seperately
+set initial state in constructor
+
+3).ES5 stateless func
+4).ES6 stateless func
+
+object.create 
+Mixins
+Parasitic Component
+StampIt
+bit.ly/react-define-component 
+
+
+Container vs presentatn comp
